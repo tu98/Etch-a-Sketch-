@@ -1,1 +1,49 @@
-stylesheet.css
+
+
+
+html { 
+    height: 100%;
+    margin:0px;
+    background: url(../images/foggy-city12.png) no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#topBlack {
+	height:30px;
+	width:100%;
+	background-color:#1E1E1E;
+}
+
+#topWhite {
+	height: 70px;
+	width: 100%;
+	background-color:#EEEEEE;
+}
+
+
+
+
+#bArea {
+	margin-top:140px;
+	width: 200px;
+	height: 400px;
+	background-color:blue;
+	left-margin: -90px;
+	float: right;
+
+	margin-right:200px;
+	z-index:1;
+}
+
+#grid {
+	position:relative;
+	margin-top:40px;
+	margin-left:120px;
+	width: 700px;
+	height: 1100px;
+	float:left;
+
+	background-color: black;
+	z-index:1;
+}
