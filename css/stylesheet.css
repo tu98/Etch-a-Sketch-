@@ -27,8 +27,9 @@ html {
 }
 
 #mail {
-	margin-left:200px;
-	margin-top:3px;
+	position:relative;
+	left:200px;
+	top:-4px;
 	display: inline;
 }
 
@@ -36,8 +37,8 @@ html {
 	color:white;
 	position: relative;
 	display:inline-block;
-	margin-left:20px;
-	margin-top:-5px;
+	left:207px;
+	top:-8px;
 }
 
 #topWhite {
@@ -66,7 +67,7 @@ html {
 #grid {
 	position:relative;
 	margin-top:40px;
-	margin-left:120px;
+	margin-left:180px;
 	width: 700px;
 	height: 1100px;
 	float:left;
