@@ -24,6 +24,8 @@ html {
 
 #name {
 	margin-left:70px;
+	width:100px;
+	height:40px;
 }
 
 #mail {
@@ -58,6 +60,7 @@ html {
 	height: 70px;
 	width: 100%;
 	background-color:#EEEEEE;
+	overflow:hidden;
 }
 
 ul {
@@ -74,19 +77,20 @@ li {
 }
 
 .tButton {
-	padding:0;
+	padding:0px;
 	margin:0;
-	margin-top:-75px;
+	/*margin-top:-75px;*/
 	margin-right:10px;
 	font-size: small;
 
 	/*display:inline-block;*/
-	display: inline-table;
+	/*display: inline-table;*/
+	display: table-cell;
 	width:60px;
 	height:70px;
 	text-decoration:none;
 	color:black;
-	border: 1px solid black;
+	border: 2px solid black;
 	text-align: center;
 	vertical-align:middle;
 	/*doesn't work*/
