@@ -60,6 +60,17 @@ html {
 	background-color:#EEEEEE;
 }
 
+.tButton {
+	display:inline-block;
+	width:50px;
+	float:right;
+	height:70px;
+	text-decoration:none;
+	color:black;
+	border: 1px solid black;
+
+}
+
 
 
 
