@@ -4,7 +4,7 @@
 html { 
     height: 100%;
     margin:0px;
-    background: url(../images/latest123.png) no-repeat center center;
+    background: url(../images/latest1234.png) no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
 }
@@ -64,7 +64,8 @@ ul {
 	margin-right:40px;
 	list-style-type:none;
 	float: right;
-	margin-top: -83px;
+	margin-top: -84px;
+	margin-right:60px;
 }
 
 li {
@@ -75,10 +76,11 @@ li {
 	padding:0;
 	margin:0;
 	margin-top:-75px;
-	margin-right:40px;
+	margin-right:10px;
+	font-size: small;
 
 	display:inline-block;
-	width:50px;
+	width:60px;
 	height:70px;
 	text-decoration:none;
 	color:black;
@@ -92,24 +94,45 @@ li {
 
 #bArea {
 	margin-top:140px;
-	width: 200px;
+	width: 275px;
 	height: 400px;
-	background-color:blue;
+
 	
 	float: right;
 
-	margin-right:100px;
+	margin-right:50px;
 	z-index:1;
+	/*border:1px solid black;*/
+
 }
 
 #grid {
 	position:relative;
 	margin-top:40px;
-	margin-left:180px;
+	/*180 before*/
+	margin-left:150px;
 	width: 800px;
 	height: 800px;
 	float:left;
+	border:2px solid black;
 
-	background-color: black;
-	z-index:1;
+	
+	/*z-index:1;*/
+}
+
+
+
+.controls {
+	color:white;
+	background-color:black;
+	display:block;
+
+	/*Ends block when text does*/
+	float: left;
+    clear: both;
+    
+    padding:0;
+    margin:6px 0 0 0;
+
+    font-size: 27px;
 }
