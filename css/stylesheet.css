@@ -64,12 +64,12 @@ html {
 	overflow:hidden;
 }
 
-ul {
+table {
 	position:absolute;
 	margin-right:40px;
 	list-style-type:none;
 	right:0;
-	margin-top: -84px;
+	margin-top: -92px;
 	margin-right:60px;
 	vertical-align: middle;
 	/*display:inline;
@@ -77,7 +77,7 @@ ul {
 
 }
 
-li {
+tr {
 	display:inline;
 }
 
