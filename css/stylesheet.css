@@ -72,6 +72,8 @@ ul {
 	margin-top: -84px;
 	margin-right:60px;
 	vertical-align: middle;
+	/*display:inline;
+	didn't work*/
 
 }
 
@@ -88,6 +90,8 @@ li {
 
 	/*display:inline-block;*/
 	/*display: inline-table;*/
+	/*this one works under
+	*/
 	display: table-cell;
 	width:60px;
 	height:70px;
