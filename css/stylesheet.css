@@ -16,6 +16,8 @@ html {
 	width:100%;
 }
 
+/*Black top header*/
+
 #topBlack {
 	position:absolute;
 	height:30px;
@@ -55,6 +57,8 @@ html {
 	margin-right:20px;
 }
 
+/*White header*/
+
 #topWhite {
 	top: 30px;
 	position:relative;
@@ -62,6 +66,7 @@ html {
 	width: 100%;
 	background-color:#EEEEEE;
 	overflow:hidden;
+	border-bottom: 1px dotted #1E1E1E;
 }
 
 table {
@@ -100,6 +105,7 @@ tr {
 	border: 2px solid black;
 	text-align: center;
 	vertical-align:middle;
+	background-color: white;
 	/*doesn't work*/
 
 
@@ -108,7 +114,7 @@ tr {
 
 
 
-
+/*Right button area*/
 #bArea {
 	margin-top:140px;
 	width: 275px;
@@ -123,35 +129,49 @@ tr {
 
 }
 
-#grid {
-	position:relative;
-	margin-top:40px;
-	/*180 before*/
-	margin-left:150px;
-	width: 800px;
-	height: 800px;
-	float:left;
-	border:2px solid black;
+.gridB {
+	display: inline;
+    margin:6px 6px 0 0;
+    font-size: 45px;
+    color:white;
+	background-color:black;
+	padding:0;
+	border:none;
 
-	
-	/*z-index:1;*/
 }
-
-
 
 .controls {
 	color:white;
 	background-color:black;
 	display:block;
 
-	/*Ends block when text does*/
-	float: left;
-    clear: both;
-    
     padding:0;
     margin:6px 0 0 0;
 
     font-size: 27px;
 
     cursor:pointer;
+    border:none;
+    text-align:left;
+}
+
+
+
+/*Grid area*/
+
+#grid {
+	position:relative;
+	margin-top:40px;
+	margin-left:150px;
+	width: 800px;
+	height: 800px;
+	float:left;
+	border:2px solid black;
+}
+
+
+
+.square {
+	background-color:black;
+	border: 1px solid white;
 }
