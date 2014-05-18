@@ -1,5 +1,14 @@
 $(document).ready(function() {
     displayGrid(16);
+    var currentHi;
+
+    $("#16").addClass("running");
+
+    $("#home").addClass("tRun");
+
+
+
+    //testi('#16');
 });
 
 function displayGrid (n) {
@@ -13,3 +22,21 @@ function displayGrid (n) {
 		wrap.append($("<div></div>").css("clear", "both"));
 	}
 }
+
+/*$(function(){
+
+    $('#navigation a').click(function(){
+
+        $('#navigation .active').removeClass('active'); // remove the class from the currently selected
+        $(this).addClass('active'); // add the class to the newly clicked link
+
+    });
+
+});*/
+
+//Button change
+
+/*$function testi(id){
+
+    $('.gridB id').addClass('running');
+});*/
