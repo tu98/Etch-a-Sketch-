@@ -4,7 +4,7 @@ $(document).ready(function() {
 
 function displayGrid (n) {
 	var size = 800;
-	var boxSize = (800 - n+1)/n;
+	var boxSize = (800 - (2*n))/n;
 	var wrap = $("#grid").html("");
 	for (var j = 0; j < n; j++) {
 		for (var i = 0; i < n; i++) {

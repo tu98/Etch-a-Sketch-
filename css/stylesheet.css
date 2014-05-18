@@ -8,6 +8,7 @@ html {
     /*background: url(../images/latest1234.png) no-repeat center center;*/
     background-size: cover;
     background-attachment: fixed;
+    /*background-color: #d4d4d4;*/
 }
 
 #wrap {
@@ -102,7 +103,7 @@ tr {
 	height:70px;
 	text-decoration:none;
 	color:black;
-	border: 2px solid black;
+	border: 1px dotted black;
 	text-align: center;
 	vertical-align:middle;
 	background-color: white;
@@ -166,7 +167,7 @@ tr {
 	width: 800px;
 	height: 800px;
 	float:left;
-	border:2px solid black;
+	/*border:2px solid black;*/
 }
 
 
@@ -174,4 +175,5 @@ tr {
 .square {
 	background-color:black;
 	border: 1px solid white;
+	float: left;
 }
