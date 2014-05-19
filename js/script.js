@@ -16,6 +16,14 @@ have to redefine their current game mode.
 
 This is why I save it in the two variables
 
+
+This way of doing things also gave the advantage of being able to run
+several game modes on the same grid which I chose not to allow
+by running the backToBlack() function before each game mode
+
+Another advantage is that I'm even able to run several game modes
+at once
+
 //check out callee to gt function name
 
 
@@ -76,12 +84,53 @@ function vanilla () {
 
 function fruit () {
 	currentGame= "fruit";
-	//var rNum= (Math.floor(Math.random() *256));
 	$('.square').mouseenter(function() {
 		$(this).css('background-color', 'rgb('+(Math.floor(Math.random() *256))+','
 			+(Math.floor(Math.random() *256))+','+(Math.floor(Math.random() *256))+')');
 	});
 }
+
+/*function tail() {
+	$(".square").hover(function() {
+		$(this).css("opacity", 1);
+	}, function () {
+		$(this).fadeTo('fast', 0);
+	});
+}
+*/
+
+/*function tail() {
+	$('.square').mouseover(function() {
+		$(this).css("opacity", 1);
+	}).mouseout(function() {
+		$(this).stop().animate({backgroundColor: 'black'} 1000);
+	});
+}*/
+/*function tail() {
+	currentGame= "tail";
+	$(".square").mouseover(function() {
+		$(this).css("opacity", 1);
+	}) .mouseout(function() {
+		$(this).css("opacity", 0, "backgroundColor", "black");
+		$(this).fadeIn('fast', 1);
+
+
+	});
+}*/
+function tail() {
+	currentGame= "tail";
+$(".square").hover(function() {
+$(this).css('backgroundColor', 'black');
+$(this).css("opacity", 0);
+}, function () {
+$(this).fadeTo('fast', 1);
+end();
+});
+};
+
+
+
+
 
 //Own function since it will call this when choosing other 
 //sketch modes
@@ -92,10 +141,15 @@ function backToBlack () {
 
 //Remove currently highlighted grid button
 //And highlight the clicked one
-//I feel like I should have been able to use $(this)
-//but that wouldn't work for some reason
 function gridHi(id) {
 	$('.gridB').removeClass("running");
-	$('#'+id).addClass("running");
+	$('#'+id).addClass("running"); // $(this) wouldn't work for some reason
+}
+
+//Basically the same function as above
+//I tried to take in 'class' as a parameter and got an error
+function modeHi(id) {
+	$('.controls').removeClass("gameRunning");
+	$('#'+id).addClass("gameRunning");
 }
 
