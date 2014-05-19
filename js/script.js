@@ -1,6 +1,32 @@
+/* I followed the directions to this project pretty closely 
+except I don't ask the user for an input for the grid size
+IMHO this actually gives the user too much choice
+since I found it very annoying to have to type in a number
+each time I wanted to try out a new sketch game.
+
+Instead I decided to give the user three different buttons for grid 
+size choice. I wrote my displayGrid function to take any n
+to keep with the spirit of the challenge.
+
+This led to an interesting problem. I wanted the user to choose 
+a grid size and be able to select new sketch games without having
+to re-difine their prefered grid. Likewise I wanted the user 
+To be in a a sketch game, change the grid size, and not
+have to redefine their current game mode.
+
+This is why I save it in the two variables
+
+
+
+
+
+*/
 $(document).ready(function() {
-    displayGrid(16);
     var currentHi;
+    globalVar currentGame ="vanilla";
+
+    displayGrid(16);
+    
 
     $("#16").addClass("running");
 
@@ -8,7 +34,7 @@ $(document).ready(function() {
 
     $("#4").addClass("gameRunning");
     
-    vanilla();
+    //vanilla();
 
 
 
@@ -28,10 +54,16 @@ function displayGrid (n) {
 		}
 		wrap.append($("<div></div>").css("clear", "both"));
 	}
+
+	var currentGame = "vanilla";
+
+	eval(currentGame+"()");
+
 }
 
 function vanilla () {
 	//$('#grid div').unbind();
+	currentGame= "vanilla";
 	$('.square').mouseenter(function() {
 		$(this).css('background-color', 'white');
 	});
