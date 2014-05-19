@@ -25,7 +25,7 @@ This is why I save it in the two variables
 */
 $(document).ready(function() {
     var currentHi;
-    currentGame ="vanilla";
+    currentGame ="fruit";
     currentGrid =16;
 
     displayGrid(16);
@@ -68,10 +68,18 @@ function displayGrid (n) {
 }
 
 function vanilla () {
-	//$('#grid div').unbind();
 	currentGame= "vanilla";
 	$('.square').mouseenter(function() {
 		$(this).css('background-color', 'white');
+	});
+}
+
+function fruit () {
+	currentGame= "fruit";
+	//var rNum= (Math.floor(Math.random() *256));
+	$('.square').mouseenter(function() {
+		$(this).css('background-color', 'rgb('+(Math.floor(Math.random() *256))+','
+			+(Math.floor(Math.random() *256))+','+(Math.floor(Math.random() *256))+')');
 	});
 }
 
@@ -91,27 +99,3 @@ function gridHi(id) {
 	$('#'+id).addClass("running");
 }
 
-/*$("#button").click( function()
-           {
-             alert('button clicked');
-           }
-      );
-});*/
-
-/*$(function(){
-
-    $('#navigation a').click(function(){
-
-        $('#navigation .active').removeClass('active'); // remove the class from the currently selected
-        $(this).addClass('active'); // add the class to the newly clicked link
-
-    });
-
-});*/
-
-//Button change
-
-/*$function testi(id){
-
-    $('.gridB id').addClass('running');
-});*/
