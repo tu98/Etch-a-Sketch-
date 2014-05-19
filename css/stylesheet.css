@@ -182,7 +182,8 @@ tr {
 .running {
 	background-color: white;
 	color: black;
-	border:1px solid black;
+	border:3px solid black;
+	/*color:#F7B89C;*/
 
 }
 
@@ -190,4 +191,15 @@ tr {
 	background-color:#1e1e1e;
 	color:white;
 	border:1px dotted white;
+
+}
+
+.gameRunning {
+	background-color: white;
+	color: black;
+	border:3px solid black;
+}
+
+.squareLit {
+	background-color: white;
 }

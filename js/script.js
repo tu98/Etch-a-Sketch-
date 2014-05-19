@@ -6,11 +6,18 @@ $(document).ready(function() {
 
     $("#home").addClass("tRun");
 
+    $("#4").addClass("gameRunning");
+    
+    vanilla();
+
 
 
     //testi('#16');
 });
 
+
+//Should use append after the loop
+//http://www.upgradetheweb.com/2014/04/jquery-performance-optimization/
 function displayGrid (n) {
 	var size = 800;
 	var boxSize = (800 - (2*n))/n;
@@ -22,6 +29,26 @@ function displayGrid (n) {
 		wrap.append($("<div></div>").css("clear", "both"));
 	}
 }
+
+function vanilla () {
+	//$('#grid div').unbind();
+	$('.square').mouseenter(function() {
+		$(this).css('background-color', 'white');
+	});
+}
+
+//Own function since it will call this when choosing other 
+//sketch modes
+function backToBlack () {
+	$('.square').css('background-color', 'black');
+}
+
+/*$("#button").click( function()
+           {
+             alert('button clicked');
+           }
+      );
+});*/
 
 /*$(function(){
 
