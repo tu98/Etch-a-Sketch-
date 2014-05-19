@@ -16,6 +16,8 @@ have to redefine their current game mode.
 
 This is why I save it in the two variables
 
+//check out callee to gt function name
+
 
 
 
@@ -23,7 +25,8 @@ This is why I save it in the two variables
 */
 $(document).ready(function() {
     var currentHi;
-    globalVar currentGame ="vanilla";
+    currentGame ="vanilla";
+    currentGrid =16;
 
     displayGrid(16);
     
@@ -45,6 +48,7 @@ $(document).ready(function() {
 //Should use append after the loop
 //http://www.upgradetheweb.com/2014/04/jquery-performance-optimization/
 function displayGrid (n) {
+	currentGrid=n;
 	var size = 800;
 	var boxSize = (800 - (2*n))/n;
 	var wrap = $("#grid").html("");
@@ -55,8 +59,10 @@ function displayGrid (n) {
 		wrap.append($("<div></div>").css("clear", "both"));
 	}
 
-	var currentGame = "vanilla";
+	//var currentGame = "vanilla";
 
+
+	//Eval is apparently bad practice
 	eval(currentGame+"()");
 
 }
@@ -73,6 +79,16 @@ function vanilla () {
 //sketch modes
 function backToBlack () {
 	$('.square').css('background-color', 'black');
+}
+
+
+//Remove currently highlighted grid button
+//And highlight the clicked one
+//I feel like I should have been able to use $(this)
+//but that wouldn't work for some reason
+function gridHi(id) {
+	$('.gridB').removeClass("running");
+	$('#'+id).addClass("running");
 }
 
 /*$("#button").click( function()
