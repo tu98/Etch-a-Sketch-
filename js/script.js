@@ -28,7 +28,6 @@ function displayGrid () {
 		wrap.append($("<div></div>").css("clear", "both"));
 	}
 
-
 	eval($('.gameRunning').attr('id')+'()');
 
 }
