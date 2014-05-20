@@ -1,10 +1,12 @@
 This project was inspired by: http://www.theodinproject.com/web-development-101/javascript-and-jquery
 
-I followed the directions pretty closely except I don't ask the user for an input for the grid size. IMHO this actually gives the user too much choice. I found it very annoying to have to type in a number each time I wanted to try out a new sketch game.
+Preview: http://htmlpreview.github.io/?https://github.com/tu98/Etch-a-Sketch-/blob/master/index.html
+
+I followed the directions pretty closely except I don't ask the user for an input for the grid size. IMHO this actually gives the user too much choice. I thought it was annoying to have to type in a number each time I wanted to try out a new sketch game.
 
 Instead I decided to give the user three different buttons for grid size choice. I wrote my displayGrid function to take any n to keep with the spirit of the challenge.
 
-This led to an interesting problem. I wanted the user to choose a grid size and be able to select new sketch games without having to re-difine their prefered grid. Likewise I wanted the user to be in  a sketch game, change the grid size, and not have to redefine their current game mode.
+This led to an interesting problem. I wanted the user to choose a grid size and be able to select new sketch games without having to re-define their preferred grid. Likewise I wanted the user to be in  a sketch game, change the grid size, and not have to re-define their current game mode.
 
 Instead of using global variables (which every resource said not to), I decided to change the index.html file with special running classes (gridRunning & gameRunning). These classes act as global variables since only the running ID's will have them and any function within script.js can access and change them. 
 
