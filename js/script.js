@@ -33,8 +33,14 @@ at once
 */
 $(document).ready(function() {
     var currentHi;
-    currentGame ="fruit";
-    currentGrid =16;
+    //currentGame ="vanilla";
+    //currentGrid =16;
+
+    $("#16").addClass("running");
+
+    $("#home").addClass("tRun");
+
+    $("#vanilla").addClass("gameRunning");
 
     displayGrid(16);
     
@@ -43,7 +49,13 @@ $(document).ready(function() {
 
     $("#home").addClass("tRun");
 
-    $("#4").addClass("gameRunning");
+    $("#vanilla").addClass("gameRunning");
+
+    //addition
+
+
+
+    //eval($('.gameRunning').attr('id')+'()');
     
     //vanilla();
 
@@ -71,7 +83,15 @@ function displayGrid (n) {
 
 
 	//Eval is apparently bad practice
-	eval(currentGame+"()");
+	/*$('.gameRunning').each(function() {
+		//var x = this.id;
+		eval(($(this).id)+"()");
+	});*/
+	//var x = $('.controls.id')
+	//eval(currentGame+"()");
+	//eval(x+"()");
+
+	eval($('.gameRunning').attr('id')+'()');
 
 }
 
@@ -117,16 +137,19 @@ function fruit () {
 
 	});
 }*/
-function tail() {
+
+//working one!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+/*function tail() {
 	currentGame= "tail";
-$(".square").hover(function() {
+$(".squares").hover(function() {
 $(this).css('backgroundColor', 'black');
 $(this).css("opacity", 0);
 }, function () {
 $(this).fadeTo('fast', 1);
-end();
+$(".controls").click(function() {
+$( ".block" ).stop();
 });
-};
+*/
 
 
 
@@ -153,3 +176,7 @@ function modeHi(id) {
 	$('#'+id).addClass("gameRunning");
 }
 
+
+
+//Avoid global variables by having special classes on selected and then 
+//ID's that can run the function
