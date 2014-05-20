@@ -39,16 +39,22 @@
 
 	<div id="bArea">
 				
-		<button class="gridB" id="16" onclick="displayGrid(16);gridHi(id);">16</button>
-		<button class="gridB" id="32" onclick="displayGrid(32);gridHi(id);">32</button>
-		<button class="gridB" id="64" onclick="displayGrid(64);gridHi(id);">64</button>
+		<button class="gridB" id="16" onclick="gridHi(id);displayGrid()">16</button>
+		<button class="gridB" id="32" onclick="gridHi(id);displayGrid()">32</button>
+		<button class="gridB" id="64" onclick="gridHi(id);displayGrid()">64</button>
 
 				
 			
-		<button class="controls" id="2" onclick="backToBlack();">Back to black</button>
+		<!--<button class="controls" id="2" onclick="backToBlack();">Back to black</button>
 		<button class="controls" id="vanilla" onclick="backToBlack();vanilla();modeHi(id);"> Vanilla icecream</button>
 		<button class="controls" id="tail" onclick="backToBlack();tail();modeHi(id);"> Stalker tail</button>
 		<button class="controls" id="fruit" onclick="backToBlack();fruit();modeHi(id);">Fruit loops</button>
+		<button class="controls" id="6">Puny pointer</button>-->
+
+		<button class="controls" id="2" onclick="backToBlack();">Back to black</button>
+		<button class="controls" id="vanilla" onclick="modeHi(id);displayGrid();"> Vanilla icecream</button>
+		<button class="controls" id="tail" onclick="modeHi(id);displayGrid();"> Stalker tail</button>
+		<button class="controls" id="fruit" onclick="modeHi(id);displayGrid();">Fruit loops</button>
 		<button class="controls" id="6">Puny pointer</button>
 	</div>
 

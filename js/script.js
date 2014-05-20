@@ -42,33 +42,18 @@ $(document).ready(function() {
 
     $("#vanilla").addClass("gameRunning");
 
-    displayGrid(16);
+    //displayGrid(16);
+    displayGrid()
     
-
-    $("#16").addClass("running");
-
-    $("#home").addClass("tRun");
-
-    $("#vanilla").addClass("gameRunning");
-
-    //addition
-
-
-
-    //eval($('.gameRunning').attr('id')+'()');
-    
-    //vanilla();
-
-
-
-    //testi('#16');
 });
 
 
 //Should use append after the loop
 //http://www.upgradetheweb.com/2014/04/jquery-performance-optimization/
-function displayGrid (n) {
-	currentGrid=n;
+
+function displayGrid () { //n used to be param
+	//currentGrid=n;
+	var n = $('.running').attr('id');
 	var size = 800;
 	var boxSize = (800 - (2*n))/n;
 	var wrap = $("#grid").html("");
