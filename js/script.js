@@ -81,14 +81,12 @@ function displayGrid () { //n used to be param
 }
 
 function vanilla () {
-	currentGame= "vanilla";
 	$('.square').mouseenter(function() {
 		$(this).css('background-color', 'white');
 	});
 }
 
 function fruit () {
-	currentGame= "fruit";
 	$('.square').mouseenter(function() {
 		$(this).css('background-color', 'rgb('+(Math.floor(Math.random() *256))+','
 			+(Math.floor(Math.random() *256))+','+(Math.floor(Math.random() *256))+')');
@@ -111,30 +109,24 @@ function fruit () {
 		$(this).stop().animate({backgroundColor: 'black'} 1000);
 	});
 }*/
-/*function tail() {
-	currentGame= "tail";
-	$(".square").mouseover(function() {
-		$(this).css("opacity", 1);
-	}) .mouseout(function() {
-		$(this).css("opacity", 0, "backgroundColor", "black");
-		$(this).fadeIn('fast', 1);
 
 
-	});
-}*/
+
 
 //working one!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 /*function tail() {
-	currentGame= "tail";
-$(".squares").hover(function() {
-$(this).css('backgroundColor', 'black');
-$(this).css("opacity", 0);
-}, function () {
-$(this).fadeTo('fast', 1);
-$(".controls").click(function() {
-$( ".block" ).stop();
-});
-*/
+	$(".squares").hover(function() {
+	$(this).css("opacity", 1);
+	}, function () {
+	$(this).fadeTo('fast', 0);
+});*/
+function tail() {
+	$('.square').mouseenter(function() {
+		$(this).css('opacity', 0);
+		$(this).fadeTo('slow', 1);
+	});
+}
+
 
 
 
@@ -143,7 +135,7 @@ $( ".block" ).stop();
 //Own function since it will call this when choosing other 
 //sketch modes
 function backToBlack () {
-	$('.square').css('background-color', 'black');
+	displayGrid();
 }
 
 
