@@ -1,16 +1,12 @@
 
 $(document).ready(function() {
-    var currentHi;
-    //currentGame ="vanilla";
-    //currentGrid =16;
 
-    $("#16").addClass("running");
+    $("#16").addClass("gridRunning");
 
     $("#home").addClass("tRun");
 
     $("#vanilla").addClass("gameRunning");
 
-    //displayGrid(16);
     displayGrid()
     
 });
@@ -19,9 +15,9 @@ $(document).ready(function() {
 //Should use append after the loop
 //http://www.upgradetheweb.com/2014/04/jquery-performance-optimization/
 
-function displayGrid () { //n used to be param
-	//currentGrid=n;
-	var n = $('.running').attr('id');
+function displayGrid () { 
+
+	var n = $('.gridRunning').attr('id');
 	var size = 800;
 	var boxSize = (800 - (2*n))/n;
 	var wrap = $("#grid").html("");
@@ -70,21 +66,17 @@ function backToBlack () {
 }
 
 
-//Remove currently highlighted grid button
-//And highlight the clicked one
+
+//Remove currently highlighted grid button and highlight the clicked one
+//Add special running classes to the running grid
 function gridHi(id) {
-	$('.gridB').removeClass("running");
-	$('#'+id).addClass("running"); // $(this) wouldn't work for some reason
+	$('.gridB').removeClass("gridRunning");
+	$('#'+id).addClass("gridRunning"); // $(this) wouldn't work for some reason
 }
 
-//Basically the same function as above
+//Basically the same function as above only for the sketch mode
 //I tried to take in 'class' as a parameter and got an error
 function modeHi(id) {
 	$('.controls').removeClass("gameRunning");
 	$('#'+id).addClass("gameRunning");
 }
-
-
-
-//Avoid global variables by having special classes on selected and then 
-//ID's that can run the function
